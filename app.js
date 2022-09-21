@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 
 const contactsRouter = require("./app/routes/contact.route");
-const ApiError = require("./app/api-error");
+// const ApiError = require("./app/api-error");
 
 app.use(cors());
 
