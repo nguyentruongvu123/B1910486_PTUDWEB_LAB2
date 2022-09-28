@@ -14,7 +14,7 @@ class ContactService {
             favorite: payload.favorite,
         };
         // Remove undefined fields
-        Objects.keys(contact).forEach(
+        Object.keys(contact).forEach(
             (key) => contact[key] === undefined && delete contact[key]
         );
         return contact;
@@ -28,6 +28,7 @@ class ContactService {
         );
         return result.value;
         }
+
     async find(filter) {
         const cursor = await this.Contact.find(filter);
             return await cursor.toArray();
